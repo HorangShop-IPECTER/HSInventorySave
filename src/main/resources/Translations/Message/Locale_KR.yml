@@ -1,0 +1,7 @@
+#if Empty, Plugin uses default prefix
+#MiniMessage format: https://webui.advntr.dev/
+prefix: ""
+
+item:
+  alreadyUse: "<red>이미 인벤세이브 권을 사용하였습니다"
+  use: "인벤세이브 권을 사용하였습니다"

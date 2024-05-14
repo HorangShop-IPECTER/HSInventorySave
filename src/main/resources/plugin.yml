@@ -1,0 +1,8 @@
+name: HSInventorySave
+version: '${version}'
+main: com.github.horangshop.inventorysave.HSInventorySave
+description: HSInventorySave
+api-version: 1.17
+authors: [ IPECTER ]
+depend: [ HSLib ]
+website: https://discord.gg/horangshop
