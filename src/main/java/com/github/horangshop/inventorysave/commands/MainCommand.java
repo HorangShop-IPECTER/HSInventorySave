@@ -28,7 +28,7 @@ public class MainCommand extends HSCommand {
 
     @Override
     public void reload(CommandData command) {
-        //Enhance CONFIG 리로드
+        plugin.getInventorySaveConfig().reload();
     }
 
     @Override

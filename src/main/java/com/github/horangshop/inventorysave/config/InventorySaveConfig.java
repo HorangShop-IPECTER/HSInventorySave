@@ -8,6 +8,7 @@ import lombok.Setter;
 public class InventorySaveConfig extends HSConfiguration {
 
     private String item = "minecraft:name_tag";
+    private boolean autoProtect = true;
     private boolean keepInventory = true;
     private boolean keepLevel = true;
 
@@ -24,6 +25,9 @@ public class InventorySaveConfig extends HSConfiguration {
                 Oraxen 아이템: oraxen:item
                 커스텀모델데이터 아이템: custom:item_type:custommodeldata
                 예) custom:bread:1 = 1번 커스텀 모델 데이터를 가진 빵 아이템""");
+        autoProtect = getBoolean("autoProtect", autoProtect, """
+                true: 아이템을 우클릭으로 소모하여 인벤 세이브를 등록합니다
+                false: 인벤토리에 가지고 있으면 자동으로 소모하여 인벤토리를 보호합니다""");
         keepInventory = getBoolean("keepInventory", keepInventory, """
                 인벤토리 아이템을 보호합니다""");
         keepLevel = getBoolean("keepLevel", keepLevel, """

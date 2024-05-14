@@ -20,6 +20,7 @@ public class ItemInteract extends HSListener {
     @EventHandler
     public void onItemInteract(PlayerInteractEvent e) {
         if (!List.of(Action.RIGHT_CLICK_AIR, Action.RIGHT_CLICK_BLOCK).contains(e.getAction())) return;
+        if (plugin.getInventorySaveConfig().isAutoProtect()) return;
         Player player = e.getPlayer();
         ItemStack itemStack = e.getItem();
         if (itemStack != null) {

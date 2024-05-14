@@ -14,12 +14,14 @@ public class PlayerJoinQuit extends HSListener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
+        if (plugin.getInventorySaveConfig().isAutoProtect()) return;
         Player player = e.getPlayer();
         plugin.getInventorySaveMap().put(player.getUniqueId(), PDCUtil.get(player));
     }
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e) {
+        if (plugin.getInventorySaveConfig().isAutoProtect()) return;
         Player player = e.getPlayer();
         PDCUtil.set(player, plugin.getInventorySaveMap().get(player.getUniqueId()));
     }
