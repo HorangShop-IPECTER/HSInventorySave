@@ -1,6 +1,7 @@
 package com.github.horangshop.inventorysave.listeners;
 
 import com.github.horangshop.inventorysave.HSInventorySave;
+import com.github.horangshop.lib.plugin.HSPlugin;
 import com.github.horangshop.lib.plugin.config.MessageConfiguration;
 import com.github.horangshop.lib.plugin.listener.HSListener;
 import com.github.horangshop.lib.util.support.ItemUtil;
@@ -16,6 +17,10 @@ public class ItemInteract extends HSListener {
 
     private final HSInventorySave plugin = HSInventorySave.getInstance();
     private final MessageConfiguration message = plugin.getConfigurations().getMessage();
+
+    public ItemInteract(HSPlugin plugin) {
+        super(plugin);
+    }
 
     @EventHandler
     public void onItemInteract(PlayerInteractEvent e) {

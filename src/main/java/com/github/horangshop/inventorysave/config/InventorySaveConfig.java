@@ -1,5 +1,6 @@
 package com.github.horangshop.inventorysave.config;
 
+import com.github.horangshop.lib.plugin.HSPlugin;
 import com.github.horangshop.lib.plugin.config.HSConfiguration;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,8 +13,8 @@ public class InventorySaveConfig extends HSConfiguration {
     private boolean keepInventory = true;
     private boolean keepLevel = true;
 
-    public InventorySaveConfig() {
-        super("InventorySave.yml", 1);
+    public InventorySaveConfig(HSPlugin plugin) {
+        super(plugin, "InventorySave.yml", 1);
         setup(this);
     }
 

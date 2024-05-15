@@ -2,6 +2,7 @@ package com.github.horangshop.inventorysave.commands;
 
 import com.github.horangshop.inventorysave.HSInventorySave;
 import com.github.horangshop.lib.HSLib;
+import com.github.horangshop.lib.plugin.HSPlugin;
 import com.github.horangshop.lib.plugin.command.CommandData;
 import com.github.horangshop.lib.plugin.command.HSCommand;
 import com.github.horangshop.lib.plugin.config.CommandConfiguration;
@@ -18,8 +19,8 @@ public class MainCommand extends HSCommand {
     private final CommonTranslation common = HSLib.getInstance().getTranslation();
     ;
 
-    public MainCommand() {
-        super("인벤세이브", true);
+    public MainCommand(HSPlugin plugin) {
+        super(plugin, "인벤세이브", true);
     }
 
     @Override

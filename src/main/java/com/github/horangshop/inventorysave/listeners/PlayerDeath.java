@@ -2,6 +2,7 @@ package com.github.horangshop.inventorysave.listeners;
 
 import com.github.horangshop.inventorysave.HSInventorySave;
 import com.github.horangshop.inventorysave.config.InventorySaveConfig;
+import com.github.horangshop.lib.plugin.HSPlugin;
 import com.github.horangshop.lib.plugin.listener.HSListener;
 import com.github.horangshop.lib.util.support.ItemUtil;
 import com.google.common.base.Preconditions;
@@ -15,6 +16,10 @@ public class PlayerDeath extends HSListener {
 
     private final HSInventorySave plugin = HSInventorySave.getInstance();
     private final InventorySaveConfig config = plugin.getInventorySaveConfig();
+
+    public PlayerDeath(HSPlugin plugin) {
+        super(plugin);
+    }
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {

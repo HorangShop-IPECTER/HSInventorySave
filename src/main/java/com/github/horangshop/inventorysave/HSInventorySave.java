@@ -33,11 +33,11 @@ public class HSInventorySave extends HSPlugin {
 
     @Override
     public void enable() {
-        inventorySaveConfig = new InventorySaveConfig();
-        registerCommand(new MainCommand());
-        registerEvent(new PlayerJoinQuit());
-        registerEvent(new ItemInteract());
-        registerEvent(new PlayerDeath());
+        inventorySaveConfig = new InventorySaveConfig(this);
+        registerCommand(new MainCommand(this));
+        registerEvent(new PlayerJoinQuit(this));
+        registerEvent(new ItemInteract(this));
+        registerEvent(new PlayerDeath(this));
     }
 
     @Override
