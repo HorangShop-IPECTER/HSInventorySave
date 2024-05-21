@@ -31,11 +31,11 @@ public class ItemInteract extends HSListener {
         if (itemStack != null) {
             if (ItemUtil.isSimilar(itemStack, ItemUtil.fromId(plugin.getInventorySaveConfig().getItem()))) {
                 if (plugin.getInventorySaveMap().getOrDefault(player.getUniqueId(), false)) {
-                    sendAnnounce(player, message.getTranslation("item.alreadyUse"));
+                    sendAnnounce(player, message.get("item.alreadyUse"));
                 } else {
                     plugin.getInventorySaveMap().put(player.getUniqueId(), true);
                     itemStack.setAmount(itemStack.getAmount() - 1);
-                    sendAnnounce(player, message.getTranslation("item.use"));
+                    sendAnnounce(player, message.get("item.use"));
                 }
             }
         }

@@ -1,13 +1,12 @@
 package com.github.horangshop.inventorysave.commands;
 
 import com.github.horangshop.inventorysave.HSInventorySave;
-import com.github.horangshop.lib.HSLib;
 import com.github.horangshop.lib.plugin.HSPlugin;
 import com.github.horangshop.lib.plugin.command.CommandData;
+import com.github.horangshop.lib.plugin.command.CommandType;
 import com.github.horangshop.lib.plugin.command.HSCommand;
 import com.github.horangshop.lib.plugin.config.CommandConfiguration;
 import com.github.horangshop.lib.plugin.config.MessageConfiguration;
-import com.github.horangshop.lib.translation.CommonTranslation;
 
 import java.util.List;
 
@@ -16,15 +15,15 @@ public class MainCommand extends HSCommand {
     private final HSInventorySave plugin = HSInventorySave.getInstance();
     private final CommandConfiguration command = plugin.getConfigurations().getCommand();
     private final MessageConfiguration message = plugin.getConfigurations().getMessage();
-    private final CommonTranslation common = HSLib.getInstance().getTranslation();
     ;
 
     public MainCommand(HSPlugin plugin) {
-        super(plugin, "인벤세이브", true);
+        super(plugin, "인벤세이브", CommandType.MAIN);
     }
 
     @Override
-    public void command(CommandData data) {
+    public boolean command(CommandData data) {
+        return false;
     }
 
     @Override
